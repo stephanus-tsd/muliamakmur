@@ -1,21 +1,22 @@
 <?php
 include '../library/query.php';
 Class DB
-{																				//query object
-	private $connection;																			//database connection
+{																				
+	private $connection;																			
 	
 	//query settings
 	private $autocommit = false;
 	
 	function __construct($config)
 	{
-		//echo '------------------- db.php -----------------------------'.'</br>';
-		//echo "db dibuat".'</br>';
-		$this->connection = new mysqli($config['host'], $config['username'], $config['password'], $config['database']);	//load connection from config
+		$this->connection = mysqli_init();
+		$this->connection->options(MYSQLI_INIT_COMMAND, 'SET AUTOCOMMIT = 0');
+		$this->connection->options(MYSQLI_OPT_CONNECT_TIMEOUT, 5);
+		$this->connection->real_connect($config['host'], $config['username'], $config['password'], $config['database']);
 		if($this->connection->connect_errno)
-			die("Connection errorr: ".$this->connection->connect_errno);							//exception
+			die("Connection errorr: ".$this->connection->connect_errno);							
 		
-		$this->connection->autocommit(false);														//set autocommit false
+		$this->connection->autocommit(false);														
 	}
 	
 	function __destruct()
