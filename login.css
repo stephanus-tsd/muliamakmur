@@ -1,0 +1,19 @@
+table {
+	width:250px;
+}
+
+h1 {
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+}
+
+p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-align:center;
+}
+
+#wrap-login{
+	margin:150px 0px;
+}
