@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#999999;
+	width:900px;
+	margin:auto;
+}
+
+#container{
+	background-color:#ffffff;
+}
+
+#header{
+	border: 1px solid #000000;
+	border-bottom: 0px;
+	background: #FFFFFF;
+	width:900px;
+	height:120px;
+	background:url(images/logo%20mulia.jpg);
+	background-repeat:no-repeat;
+}
+
+#header-main{
+	text-align:right;
+	padding-top:20px;
+	padding-right:5px;
+	text-decoration:underline;
+}
+
+#content{
+	border: 1px solid #000000;
+	border-bottom:0px;
+	background:#FFFFFF;
+	width:900px;
+	height:500px;
+}
+
+#content-main{
+	text-align:center;
+	border-bottom: 1px solid #000000;
+}
+
+#footer{
+	border: 1px solid #000000;
+	background:#FFFFFF;
+	width:900px;
+	height:70px;
+	clear:both;
+}
+
+#footer-main{
+	text-align:center;
+}
+
