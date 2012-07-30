@@ -5,9 +5,9 @@ Class Sales extends User
 	{
 		//echo 'masuk ke sales';
 		$this->db_config['host'] = 'localhost';
-		$this->db_config['username'] = 'admin';
-		$this->db_config['password'] = 'admin';
-		$this->db_config['database'] = 'muliamakmur';
+		$this->db_config['username'] = 'root';
+		$this->db_config['password'] = '';
+		$this->db_config['database'] = 'project';
 		parent::__construct();
 	}
 }
