@@ -9,8 +9,7 @@ $handler = new userHandler();
 
 if($handler->user->login($userid,$password))
 {
-	//header('location:../application_view/utamass12.php');
-	echo "berhasil login<br />";
+	header('location:../Layout/index.php');
 }
 else 
 	//header('location:login.html');

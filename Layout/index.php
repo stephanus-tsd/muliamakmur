@@ -11,8 +11,10 @@
 <body>
 <div id="container">
 <div id="header">
-<img src="images/logo mulia.jpg" width="50" height="50" style="margin-left:7px; margin-top:10px;"/>
-<div id="header-main"></div>
+	<div id="image" style="float:left; padding-left:100px;">
+    	<img src="images/logo mulia.jpg" width="50" height="50" style="margin-left:7px; margin-top:10px;"/>
+    </div>
+	<div id="header-main" style="padding-top:20px;" align="center">PT. MULIA MAKMUR ELEKTRIKATAMA</div>
 </div>
 <div id="content">
 
@@ -63,16 +65,15 @@
      </tr>
      <tr>
      <td>Tanggal PO </td>
-     <td>
+     <td colspan="5">
      <select>
      <?php
 		for($i=1; $i<32; $i++)
 		print ("<option value=$i>$i</option>");
 	 ?>
      </select>
-     </td>
-     <td>Bulan</td>
-     <td>
+     Bulan
+    
      <?php
 		$month = array(
 		"01"=>"Januari",
@@ -97,9 +98,8 @@
 		}
 		echo '</select>';
 		?>
-     </td>
-     <td>Tahun</td>
-     <td>
+     
+     Tahun
      <?
 		echo "<select name='tanggal'>";
 		for ($i=2012;$i<=20;$i++) {
@@ -123,16 +123,16 @@
      </tr>
      <tr>
      <td>Dateline Pengiriman</td>
-     <td>
+     <td colspan="5">
      <?php
 	 	print ("<select>");
 		for($i=1; $i<32; $i++)
 		print ("<option value=$i>$i</option>");
 		print ("</select>");
 		?>
-     </td>
-     <td>Bulan</td>
-     <td>
+    
+     Bulan
+     
      <?php
 		$month = array(
 		"01"=>"Januari",
@@ -157,9 +157,9 @@
 		}
 		echo '</select>';
 		?>
-     </td>
-     <td>Tahun</td>
-     <td>
+     
+     Tahun
+     
      <?
 		echo "<select name='tanggal'>";
 		for ($i=2012;$i<=20;$i++) {
