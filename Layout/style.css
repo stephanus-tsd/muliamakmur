@@ -2,49 +2,55 @@
 /* CSS Document */
 
 body{
-	background:#999999;
-	width:900px;
+	background:#ffffff;
+	width:1000px;
 	margin:auto;
 }
 
 #container{
 	background-color:#ffffff;
+	margin-top: 7px;
 }
 
 #header{
 	border: 1px solid #000000;
 	border-bottom: 0px;
+	border-top: 0px;
 	background: #FFFFFF;
-	width:900px;
-	height:120px;
-	background:url(images/logo%20mulia.jpg);
-	background-repeat:no-repeat;
+	width:1000px;
+	height:70px;
 }
 
-#header-main{
-	text-align:right;
-	padding-top:20px;
-	padding-right:5px;
-	text-decoration:underline;
-}
 
 #content{
 	border: 1px solid #000000;
 	border-bottom:0px;
 	background:#FFFFFF;
-	width:900px;
+	width:1000px;
 	height:500px;
 }
 
 #content-main{
 	text-align:center;
-	border-bottom: 1px solid #000000;
+	border-bottom: 0px solid #000000;
 }
+
+#content-table{
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	background:#999999;
+	width:1000px;
+	height:420px;
+	margin-top:5px;
+	}
 
 #footer{
 	border: 1px solid #000000;
+	border-bottom: 0px;
 	background:#FFFFFF;
-	width:900px;
+	width:1000px;
 	height:70px;
 	clear:both;
 }
