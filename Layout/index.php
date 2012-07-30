@@ -42,6 +42,11 @@
     </div>
     
     <div id="content-table">
+		
+        <?php
+     		include("koneksi.php");
+		?>
+        
     </div>
     
     <div id="content-menu">
@@ -113,7 +118,7 @@
      <td>Pemasok</td><td><input type="text"/></td>
      </tr>
      <tr>
-     <td>Alamat</td><td><input type="text" height="70" width="200" /></td>
+     <td>Alamat</td><td><input type="text" height="70" width="145" /></td>
      </tr>
      <tr>
      <td>Up</td><td><input type="text"/></td>
