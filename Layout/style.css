@@ -27,12 +27,13 @@ body{
 	border-bottom:0px;
 	background:#FFFFFF;
 	width:1000px;
-	height:500px;
+	height:700px;
 }
 
 #content-main{
 	text-align:center;
 	border-bottom: 0px solid #000000;
+	
 }
 
 #content-table{
@@ -40,9 +41,9 @@ body{
 	border-right: 0px;
 	border-top: 1px solid #000000;
 	border-bottom: 1px solid #000000;
-	background:#999999;
+	background:#CCCCCC;
 	width:1000px;
-	height:420px;
+	height:250px;
 	margin-top:5px;
 	}
 
