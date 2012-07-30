@@ -76,14 +76,14 @@ Class Query
 	{
 		//check if array
 		if(!is_array($insertFields) || !is_array($values)
-			throw exception("Insertfields or values is not array");
+			throw new Exception("Insertfields or values is not array");
 			
 		$fieldsLength = count($insertFields);
 		$valuesLength = count($values);
 		
 		//check if the length is same
 		if($fieldsLength != $valuesLength)
-			throw exception("Fields and values length not same");
+			throw new Exception("Fields and values length not same");
 		
 		$insertStatement = "INSERT INTO ".$table."(";
 			
@@ -115,7 +115,7 @@ Class Query
 	{
 		//check if array
 		if(!is_array($values)
-			throw exception("Values is not array");
+			throw new Exception("Values is not array");
 			
 		$insertStatement = "INSERT INTO ".$table." VALUES(";
 		
@@ -138,7 +138,7 @@ Class Query
 	public function do_update($table, $updates, $condition)
 	{
 		if(!is_array($updates)
-			throw exception("Updates is not array");
+			throw new Exception("Updates is not array");
 			
 		$updatesLength = count($updates);
 		
@@ -165,7 +165,7 @@ Class Query
 	public function do_updateAll($table, $updates)
 	{
 		if(!is_array($updates)
-			throw exception("Updates is not array");
+			throw new Exception("Updates is not array");
 			
 		$updatesLength = count($updates);
 		
@@ -209,7 +209,7 @@ Class Query
 		}
 		else
 		{
-			throw exception("Error fetching array result");
+			throw new Exception("Error fetching array result");
 		}
 	}
 }
