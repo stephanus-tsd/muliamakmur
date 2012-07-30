@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include '../library/user_handler.php';
-
+echo "masuk";
 $userid = $_POST['userid'];
 $password = $_POST['password'];
 
