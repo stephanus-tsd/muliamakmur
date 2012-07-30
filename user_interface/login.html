@@ -8,26 +8,30 @@
 
 <body>
 <div align="center" id="wrap-login">
-<table width="441" >
+<table border="5" bordercolor="#FFCC00">
+<tr>
+	<td>
+<table width="441" border="1" bordercolor="#000000" >
 	<tr>
    	  <td width="433">
-  		<div id="header">
-            <h1>PT. MULIAMAKMUR ELEKTRIKATAMA</h1>
+      	<div id="pict-header">
+      		<img src="../image/logo mulia.jpg" width="69" height="74" />      
+        </div>
+  		<div id="header" align="center">
+            <h1>PT. MULIA MAKMUR ELEKTRIKATAMA</h1>
         </div>
       </td>
     </tr>
     <tr>
     	<td>
-       	  <form method="post">
-            <table border="5" bordercolor="#FFCC00">
-                <tr>
-                    <td>
-                        <table>
-                            <tr>
+       	  <form method="post" action="../user_interface/login_auth.php">
+            <div style="padding-top:10px; padding-bottom:10px;">
+                        <table width="279" align="center">
+							<tr>
                                 <td height="40" colspan="3" align="center">
-                                  <h1>User Login</h1>
-                                </td>
-                          </tr>
+                                   <h1 style="font-size:22px">User Login</h1>
+                              	</td>
+                          	</tr>
                             <tr>
                                 <td height="40">User ID</td>
                               <td>:</td>
@@ -44,18 +48,19 @@
                               <td><input type="submit" name="submit" value="login"  /></td>
                           </tr>
                         </table>
-                    </td>
-                </tr>
-            </table>
+              </div>
             </form>
     	</td>
     </tr>
     <tr>
     	<td>
-        	<div id="footer">
+        	<div id="footer" align="center">Copyright @ Creative Spirit. All Right Reserved 2012.
             </div> 
         </td>
     </tr>
+</table>
+		</td>
+	</tr>
 </table>
 	
 </div>

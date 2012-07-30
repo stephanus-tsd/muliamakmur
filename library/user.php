@@ -82,19 +82,19 @@ Class User
 	}
 	
 	//AND password = md5('$password')
-	public function login($username,$password)
+	public function login($userid,$password)
 	{
-		//echo "masuk login".'</br>';
+		echo "masuk login".'</br>';
 		$password = md5($password);
-		$query_statement = "SELECT namaSales, email FROM sales WHERE username = '$username' AND password = '$password'";
-		//echo $query_statement.'</br>';
+		$query_statement = "SELECT nama, level FROM user WHERE userID = '$userid' AND password = '$password'";
+		echo $query_statement.'</br>';
 		$query = $this->db->query($query_statement); 
 		if($query->result()) 
 		{
 			$data = $query->fetchedResult();
-			//echo $data['namaSales'].'</br>';
-			//echo $data['email'].'</br>';
-			$this->session->set_userSession($data);
+			echo $data['namaSales'].'</br>';
+			echo $data['email'].'</br>';
+			//$this->session->set_userSession($data);
 			return true;
 		}
 		else {
