@@ -3,7 +3,7 @@ Class Guest extends User
 {
 	function __construct()
 	{
-		echo 'masuk ke guest'.'</br>';
+		//echo 'masuk ke guest'.'</br>';
 		$this->db_config['host'] = 'localhost';
 		$this->db_config['username'] = 'root';
 		$this->db_config['password'] = '';

@@ -75,7 +75,7 @@ Class Query
 	public function do_insert($table, $insertFields, $values)
 	{
 		//check if array
-		if(!is_array($insertFields) || !is_array($values)
+		if(!is_array($insertFields) || !is_array($values))
 			throw new Exception("Insertfields or values is not array");
 			
 		$fieldsLength = count($insertFields);
@@ -114,7 +114,7 @@ Class Query
 	public function do_insertAll($table, $values)
 	{
 		//check if array
-		if(!is_array($values)
+		if(!is_array($values))
 			throw new Exception("Values is not array");
 			
 		$insertStatement = "INSERT INTO ".$table." VALUES(";
@@ -137,7 +137,7 @@ Class Query
 	//update
 	public function do_update($table, $updates, $condition)
 	{
-		if(!is_array($updates)
+		if(!is_array($updates))
 			throw new Exception("Updates is not array");
 			
 		$updatesLength = count($updates);
@@ -164,7 +164,7 @@ Class Query
 	//update all
 	public function do_updateAll($table, $updates)
 	{
-		if(!is_array($updates)
+		if(!is_array($updates))
 			throw new Exception("Updates is not array");
 			
 		$updatesLength = count($updates);

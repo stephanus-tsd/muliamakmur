@@ -53,7 +53,7 @@ Class User
 			if(!$this->userSession)
 				return false;
 			
-			$query_statement = "SELECT kodeSales, userLevel FROM sales WHERE namaSales = '".$this->userSession['namaSales']."'";
+			$query_statement = "SELECT userID, level FROM sales WHERE nama = '".$this->userSession['nama']."'";
 			//echo "Query statement user : ".$query_statement.'</br>';
 			$query = $this->db->query($query_statement);
 			if($query->result())
@@ -64,8 +64,8 @@ Class User
 		else
 		{
 			echo "masuk ke userAtt guest".'</br>';
-			$userAtt['kodeSales'] = "guest";
-			$userAtt['userLevel'] = 0;
+			$userAtt['userID'] = "guest";
+			$userAtt['level'] = 0;
 		}
 		
 		$this->page_fetcher = new pageFetcher($this->db, $this->userAtt, $this->userSession);
@@ -92,9 +92,8 @@ Class User
 		if($query->result()) 
 		{
 			$data = $query->fetchedResult();
-			echo $data['namaSales'].'</br>';
-			echo $data['email'].'</br>';
-			//$this->session->set_userSession($data);
+			echo $data['nama'];
+			$this->session->set_userSession($data);
 			return true;
 		}
 		else {
