@@ -34,7 +34,7 @@
                 </select>                </td>
                 <td>
                 <input type="text"  />
-                <input type="button" value="search"/>                </td>
+                <input type="submit" value="search"/>                </td>
                 </tr>
                 </table>
                 </form>
@@ -43,11 +43,56 @@
     
     <div id="content-table">
 		
-        <?php
-     		include("koneksi.php");
-		?>
         
-    </div>
+         	 <?php
+     		include("koneksi.php");
+			?>
+    
+    
+    <table border="1" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:4px; width:100%;">
+         <tr style=" border:#000000;">
+             <th>No. PO</th>
+             <th>Tanggal PO</th>
+             <th>Supplier</th>
+             <th>Alamat</th>
+             <th>Up</th>
+             <th>Type Supplier</th>
+             <th>Dateline</th>
+             <th>Total Order</th>
+             <th>Grand Total</th>
+             <th>Action</th>
+         </tr>
+         <?php
+              $sql = "SELECT * FROM po";
+              $hasil = mysql_query($sql);
+              if(mysql_num_rows($hasil) > 0)
+              {
+                  while($data = mysql_fetch_array($hasil))
+                  {
+                       echo"<tr align='center'>";
+                            echo"<td >".$data['noPO']."</td>";
+                            echo"<td >".$data['tglPO']."</td>";
+                            echo"<td >".$data['supplier']."</td>";
+                            echo"<td >".$data['alamat']."</td>";
+                            echo"<td >".$data['up']."</td>";
+                            echo"<td >".$data['typeSupplier']."</td>";
+                            echo"<td >".$data['dateline']."</td>";
+                            echo"<td >".$data['totalOrder']."</td>";
+                            echo"<td >".$data['grandTotal']."</td>";
+							echo"<td ><input type='submit' value='Edit' /><input type='submit' value='Hapus'/></td>";
+							
+                       echo"</tr>";
+                   }
+               }else{
+                    echo"<tr>";
+                         echo"<td colspan='4'>Data Belum Ada</td>";
+                    echo"</tr>";
+               }
+         ?>
+         </table>
+        
+        
+            </div>
     
     <div id="content-menu">
     
