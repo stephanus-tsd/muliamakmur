@@ -53,7 +53,7 @@ Class User
 			if(!$this->userSession)
 				return false;
 			
-			$query_statement = "SELECT userID, level FROM sales WHERE nama = '".$this->userSession['nama']."'";
+			$query_statement = "SELECT userID, level FROM user WHERE nama = '".$this->userSession['nama']."'";
 			//echo "Query statement user : ".$query_statement.'</br>';
 			$query = $this->db->query($query_statement);
 			if($query->result())
@@ -84,15 +84,12 @@ Class User
 	//AND password = md5('$password')
 	public function login($userid,$password)
 	{
-		echo "masuk login".'</br>';
-		$password = md5($password);
-		$query_statement = "SELECT nama, level FROM user WHERE userID = '$userid' AND password = '$password'";
-		echo $query_statement.'</br>';
+		//$password = md5($password);
+		$query_statement = "SELECT nama, posisi FROM user WHERE userID = '$userid' AND password = '$password'";
 		$query = $this->db->query($query_statement); 
 		if($query->result()) 
 		{
 			$data = $query->fetchedResult();
-			echo $data['nama'];
 			$this->session->set_userSession($data);
 			return true;
 		}
@@ -116,7 +113,7 @@ Class User
 	
 	public function get_currentLevel() 
 	{
-		return $this->userAtt['userLevel'];
+		return $this->userAtt['level'];
 	}
 	
 	public function add_customerData($customer, $keluarga, $date)

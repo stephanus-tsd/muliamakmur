@@ -9,7 +9,14 @@ $handler = new userHandler();
 
 if($handler->user->login($userid,$password))
 {
-	header('location:../Layout/index.php');
+	if ($handler->user-> == "ADM")
+	{
+		header('location:../Layout/index.php');
+	}
+	else //if ($handler->user->userAtt['userID'] == "Test")
+	{
+		echo "Masuk Test";
+	}
 }
 else 
 	//header('location:login.html');

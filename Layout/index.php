@@ -55,7 +55,8 @@
      <div id="TabbedPanels1" class="TabbedPanels">
        <ul class="TabbedPanelsTabGroup">
          <li class="TabbedPanelsTab" tabindex="0">Tambah Data</li>
-         <li class="TabbedPanelsTab" tabindex="0">Hapus Data</li>
+         <li class="TabbedPanelsTab" tabindex="1">Hapus Data</li>
+         <li class="TabbedPanelsTab" tabindex="2">Edit Data</li>
        </ul>
        <div class="TabbedPanelsContentGroup">
          <div class="TabbedPanelsContent">Content 1
