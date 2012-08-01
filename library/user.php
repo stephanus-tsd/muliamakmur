@@ -53,7 +53,7 @@ Class User
 			if(!$this->userSession)
 				return false;
 			
-			$query_statement = "SELECT userID, level FROM user WHERE nama = '".$this->userSession['nama']."'";
+			$query_statement = "SELECT posisi, level FROM user WHERE nama = '".$this->userSession['nama']."'";
 			//echo "Query statement user : ".$query_statement.'</br>';
 			$query = $this->db->query($query_statement);
 			if($query->result())
@@ -63,8 +63,8 @@ Class User
 		}
 		else
 		{
-			echo "masuk ke userAtt guest".'</br>';
-			$userAtt['userID'] = "guest";
+			//echo "masuk ke userAtt guest".'</br>';
+			$userAtt['posisi'] = "guest";
 			$userAtt['level'] = 0;
 		}
 		
@@ -101,6 +101,7 @@ Class User
 	
 	public function logout()
 	{
+		
 	}
 	
 	public function logged_in()
@@ -114,6 +115,38 @@ Class User
 	public function get_currentLevel() 
 	{
 		return $this->userAtt['level'];
+	}
+	
+	public function isAdmin()
+	{
+		if($this->userAtt['posisi'] == "admin")
+			return true;
+		else
+			return false;
+	}
+	
+	public function isPurchasing()
+	{
+		if($this->userAtt['level'] == "purchasing")
+			return true;
+		else
+			return false;
+	}
+	
+	public function isGudang()
+	{
+		if($this->userAtt['level'] == "gudang")
+			return true;
+		else
+			return false;
+	}
+	
+	public function isFinance()
+	{
+		if($this->userAtt['level'] == "finance")
+			return true;
+		else
+			return false;
 	}
 	
 	public function add_customerData($customer, $keluarga, $date)

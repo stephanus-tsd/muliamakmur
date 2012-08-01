@@ -47,6 +47,7 @@ Class Session
 	public function unset_userSession()
 	{
 		unset($_SESSION['user']);			//unset all user session data
+		session_destroy();
 	}
 }
 ?>

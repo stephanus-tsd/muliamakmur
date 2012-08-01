@@ -9,13 +9,22 @@ $handler = new userHandler();
 
 if($handler->user->login($userid,$password))
 {
-	if ($handler->user-> == "ADM")
+	if ($handler->user->isAdmin())
 	{
 		header('location:../Layout/index.php');
+		
 	}
-	else //if ($handler->user->userAtt['userID'] == "Test")
+	else if ($handler->user->isPurchasing())
 	{
-		echo "Masuk Test";
+		echo "Masuk Purchasing";
+	}
+	else if ($handler->user->isGudang())
+	{
+		echo "Masuk Gudang";
+	}
+	else if ($handler->user->isFinance())
+	{
+		echo "Masuk Finance";
 	}
 }
 else 
