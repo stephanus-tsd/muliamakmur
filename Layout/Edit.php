@@ -47,7 +47,7 @@
 			?>
     
     
-    <table border="1" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:4px; width:100%;">
+    <table border="1" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:0px; width:100%;">
          <tr style=" border:#000000;">
              <th>No. PO</th>
              <th>Tanggal PO</th>
