@@ -92,7 +92,7 @@
     
     <div id="content-menu"> 
          <fieldset>
-     		<legend align="center">[ Tambah data ]</legend>
+     		<legend align="center">[ Edit data ]</legend>
     		 <table border="1" align="center">
      		<form >
              <tr>
