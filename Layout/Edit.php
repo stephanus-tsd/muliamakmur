@@ -20,7 +20,7 @@
 
 <div id="content-form" align="left">
 				<form name="">
-				<table style="border:1px solid #000000; margin-top:5px; margin-left:5px">
+				<table border="1" cellpadding="5" cellspacing="0" style="margin-top:5px; margin-left:5px">
 				<tr>
 				<td>Cari berdasarkan :</td>
 				<td>
@@ -47,7 +47,7 @@
 			?>
     
     
-    <table border="1" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:0px; width:100%;">
+    <table border="1" cellpadding="2" cellspacing="0" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:2px; width:99%;">
          <tr style=" border:#000000;">
              <th>No. PO</th>
              <th>Tanggal PO</th>
@@ -93,7 +93,7 @@
     <div id="content-menu"> 
          <fieldset>
      		<legend align="center">[ Edit data ]</legend>
-    		 <table border="1" align="center">
+    		 <table border="1" align="center" cellpadding="2" cellspacing="0" >
      		<form >
              <tr>
              <td>Nomor PO </td><td><input type="text" /></td>

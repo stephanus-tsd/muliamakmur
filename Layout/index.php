@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
 <div id="container">
 <div id="header">
 	<div id="image" style="float:left; padding-left:100px;">
@@ -20,7 +21,7 @@
 
 <div id="content-form" align="left">
 				<form name="">
-				<table style="border:1px solid #000000; margin-top:5px; margin-left:5px">
+				<table border="1" cellpadding="5" cellspacing="0" style="margin-top:5px; margin-left:5px">
 				<tr>
 				<td>Cari berdasarkan :</td>
 				<td>
@@ -47,7 +48,7 @@
 			?>
     
     
-    <table border="1" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:0px; width:100%;">
+    <table border="1" cellpadding="2" cellspacing="0" align="Center" style="background-color:#FFFFFF; border: 1px solid #000000;  margin-top:2px; width:99%;">
          <tr style=" border:#000000;">
              <th>No. PO</th>
              <th>Tanggal PO</th>
@@ -92,16 +93,16 @@
     
     <div id="content-menu"> 
          <fieldset>
-     		<legend align="center">[ Tambah data ]</legend>
-    		 <table border="1" align="center">
-     		<form >
+     		<legend align="center">[ Form ]</legend>
+    		 <table border="1" align="center" cellpadding="2" cellspacing="0" >
+     		<form>
              <tr>
-             <td>Nomor PO </td><td><input type="text" /></td>
+             <td>Nomor PO </td><td><input type="text" name="noPO"/></td>
              </tr>
              <tr>
              <td>Tanggal PO </td>
              <td colspan="5">
-             <select>
+             <select name="tanggal">
              <?php
 			 	echo ("<option>Pilih Tanggal</option>");
                 for($i=1; $i<32; $i++)
@@ -126,7 +127,7 @@
                 "12"=>"Desember");
                 ?>
                 <?php
-                echo "<select>";
+                echo "<select name='bulan'>";
 				echo ("<option>Pilih Bulan</option>");
                 foreach ($month as $key=>$value){
                 echo '<option value="'.$key.'"';
@@ -138,7 +139,7 @@
              
              Tahun
              <?
-                echo "<select>";
+                echo "<select name='tahun'>";
 				echo ("<option>Pilih Tahun</option>");
                 for ($i=2012;$i<=20;$i++) {
                 echo "<option value=$i selected>$i</option> ";
@@ -148,22 +149,22 @@
              </td>
              </tr>
              <tr>
-             <td>Pemasok</td><td><input type="text"/></td>
+             <td>Pemasok</td><td><input type="text" name="pemasok"/></td>
              </tr>
              <tr>
-             <td>Alamat</td><td><input type="text" height="70" width="145" /></td>
+             <td>Alamat</td><td><textarea name="alamat" cols="40"></textarea></td>
              </tr>
              <tr>
-             <td>Up</td><td><input type="text"/></td>
+             <td>Up</td><td><input type="text" name="up"/></td>
              </tr>
              <tr>
-             <td>Tipe Pemasok<td><select><option>PPN</option><option>Bukan PPN</option></select></td>
+             <td>Tipe Pemasok<td><select name="tipepemasok"><option>PPN</option><option>Bukan PPN</option></select></td>
              </tr>
              <tr>
              <td>Dateline Pengiriman</td>
              <td colspan="5">
              <?php
-                print ("<select>");
+                print ("<select name='tanggalpengiriman'>");
 				echo ("<option>Pilih Tanggal</option>");
                 for($i=1; $i<32; $i++)
                 print ("<option value=$i>$i</option>");
@@ -188,7 +189,7 @@
                 "12"=>"Desember");
                 ?>
                 <?php
-                echo "<select>";
+                echo "<select name='bulanpengiriman'>";
 				echo ("<option>Pilih Bulan</option>");
                 foreach ($month as $key=>$value){
                 echo '<option value="'.$key.'"';
@@ -201,7 +202,7 @@
              Tahun
              
              <?
-                echo "<select>";
+                echo "<select name='tahunpengiriman'>";
 				echo ("<option>Pilih Tahun</option>");
                 for ($i=2012;$i<=20;$i++) {
                 echo "<option value=$i selected>$i</option> ";
@@ -211,10 +212,10 @@
              </td>
              </tr>
              <tr>
-             <td>Total Order</td><td><input type="text"/></td>
+             <td>Total Order</td><td><input type="text" name="totalorder"/></td>
              </tr>
              <tr>
-             <td>Grand Total</td><td><input type="text"/></td>
+             <td>Grand Total</td><td><input type="text" name="grandtotal"/></td>
              </tr>
              <tr>
              <td colspan="2" align="right"><input type="submit" value="Masukan Data" /></td>
