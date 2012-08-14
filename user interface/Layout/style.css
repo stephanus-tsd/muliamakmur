@@ -45,7 +45,6 @@ body{
 	width:1000px;
 	height:250px;
 	margin-top:5px;
-	overflow:auto;
 	}
 
 #footer{
@@ -59,22 +58,5 @@ body{
 
 #footer-main{
 	text-align:center;
-}
-
-#header-main{
-	padding-top:13px;
-	padding-right:165px;
-	font-size:20px;
-}
-
-#header-main2{
-	padding-top:5px;
-	padding-right:165px;
-	font-size:24px;
-}
-
-#image-logo{
-	float:left; 
-	padding-left:20%;
 }
 

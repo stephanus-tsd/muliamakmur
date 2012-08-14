@@ -10,10 +10,11 @@
 
 <div id="container">
 <div id="header">
-	<div id="image" style="float:left; padding-left:100px;">
-    	<img src="images/logo mulia.jpg" width="50" height="50" style="margin-left:7px; margin-top:10px;"/>
+	<div id="image-logo">
+    	<img src="images/logo mulia.jpg" width="50" height="50" style="margin-top:10px;"/>
     </div>
-	<div id="header-main" style="padding-top:20px;" align="center">PT. MULIA MAKMUR ELEKTRIKATAMA</div>
+	<div id="header-main" align="center">PT. MULIA MAKMUR ELEKTRIKATAMA</div>
+    <div id="header-main2" align="center">PURCHASING</div>
 </div>
 <div id="content">
 
