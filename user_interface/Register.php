@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>User Login</title>
+<link href="login.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div align="center" id="wrap-login">
+<table border="5" bordercolor="#FFCC00">
+<tr>
+	<td>
+<table width="441" border="1" bordercolor="#000000" >
+	<tr>
+   	  <td width="433">
+      	<div id="pict-header">
+      		<img src="../image/logo mulia.jpg" width="69" height="74" />      
+        </div>
+  		<div id="header" align="center">
+            <h1>PT. MULIA MAKMUR ELEKTRIKATAMA</h1>
+        </div>
+      </td>
+    </tr>
+    <tr>
+    	<td>
+       	  <form method="post" action="../user_interface/login_auth.php">
+            <div style="padding-top:10px; padding-bottom:10px;">
+                        <table width="279" align="center">
+							<tr>
+                                <td height="40" colspan="3" align="center">
+                                   <h1 style="font-size:22px">Register User</h1>
+                              	</td>
+                          	</tr>
+                            <tr>
+                                <td height="40">Username</td>
+                              <td>:</td>
+                                <td><input type="text" name="username"  /></td>
+                            </tr>
+                            <tr>
+                                <td height="40">Password</td>
+                              <td>:</td>
+                                <td><input type="password" name="password"  /></td>
+                            </tr>
+                            <tr>
+                                <td height="40">Rewrite Password</td>
+                              <td>:</td>
+                                <td><input type="password" name="repass"  /></td>
+                            </tr>
+                            <tr>
+                                <td height="40">Nama</td>
+                              <td>:</td>
+                                <td><input type="text" name="nama"  /></td>
+                            </tr>
+                            <tr>
+                                <td height="40">Posisi</td>
+                              <td>:</td>
+                                <td><input type="text" name="posisi"  /></td>
+                            </tr>
+                      <tr>
+                                <td height="40">&nbsp;</td>
+                          <td>&nbsp;</td>
+                              <td><input type="submit" name="submit" value="register"  /></td>
+                          </tr>
+                        </table>
+              </div>
+            </form>
+    	</td>
+    </tr>
+    <tr>
+    	<td>
+        	<div id="footer" align="center">Copyright 2012 @ Creative Spirit. All Right Reserved.
+            </div> 
+        </td>
+    </tr>
+</table>
+		</td>
+	</tr>
+</table>
+	
+</div>
+</body>
+</html>
